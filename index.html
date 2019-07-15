@@ -9,18 +9,63 @@
   <title>Frontend Mentor | Ping coming soon page</title>
 
   <link rel="stylesheet" type="text/css" href="./app/css/main.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+   <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700&display=swap" rel="stylesheet">
+   <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body ng-app="mainApp">
+  <div class="wrapper container" ng-controller="homeController as $ctrl">
+    <header>
+      <h1 class="font-weight-700 m-0">PING<pre>.</pre></h1>
+    </header>
+
+    <main>
+      <div class="d-flex flex-column align-items-center">
+        <h2 class="color-grey">We are launching <strong class="color-black font-weight-700">soon!</strong></h2>
+        <p class="m-0">Subscribe and get notified</p>
+      </div>
+
+      <div class="mt-4">
+        <form class="d-flex justify-content-center" ng-submit="$ctrl.validation()">
+          <div class="">
+            <input class="input-padding rounded-pill border" type="email" name="email" ng-model="$ctrl.data.email" placeholder="Your email address..." />
+            <p class="error-padding color-red">test</p>
+          </div>
+          
+          <div>
+            <button class="btn ml-3 py-btn rounded-pill font-weight-600 button-shadow text-white color-blue" type="submit">Notify Me</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-5 d-flex justify-content-center align-items-center">
+        <img class="w-50 img-fluid" src="./app/images/illustration-dashboard.png">       
+      </div>
+    </main>
+
+    <footer>
+        <div class="w-100 d-flex justify-content-center">
+          <a id="fb" class="border rounded-pill" href="#"><i class="fab fa-facebook-f fa-m" aria-hidden="true"></i></a>
+          <a class="mx-2 border rounded-pill icons-padding" href="#"><i class="fab fa-twitter fa-m" aria-hidden="true"></i></a>
+          <a class="border rounded-pill icons-padding" href="#"><i class="fab fa-instagram fa-m" aria-hidden="true"></i></a>
+        </div>
+
+        <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+  </div>
 
     <!-- Main Angular scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
 
     <!-- UI-Router -->
-    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
-
-    <script src=".app/js/homeCtrl.js"></script>
+    <!-- <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script> -->
+    
+    <script src="./app/js/app.js"></script>
+    <script src="./app/js/homeController.js"></script>
 
 </body>
 </html>

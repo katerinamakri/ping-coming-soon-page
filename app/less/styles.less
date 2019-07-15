@@ -1,5 +1,35 @@
 .wrapper {
-	header { background-color:yellow; }
-	main { background-color:grey; }
-	footer { background-color:blue }
+	min-height:100vh; position:relative; padding:86px 0rem 122.78px 0rem !important; font-family:'Libre Franklin', sans-serif;
+	
+	h1 { font-size:2rem; }
+	h2 { font-size:2.5rem; font-weight:300; }
+	pre { color:#4F7DF3; display:inline;}
+
+	.color-blue { background-color:#4F7DF3; }
+	.color-grey { color:hsl(0, 0%, 59%); }
+	.color-black { color:#000000; }
+	.color-red { color:hsl(354, 100%, 66%); }
+
+	.font-weight-700 { font-weight:700; }
+	.font-weight-600 { font-weight:600; }
+
+	.input-padding { padding:0.8rem 9rem 0.8rem 2rem; }
+	.button-shadow { box-shadow:0rem 0.5rem 0.7rem rgba(79,125,243,0.4); }
+	.py-btn { padding:0.8rem 4rem; }
+	.border-red { border:1px solid hsl(354, 100%, 66%); }
+	.error-padding { padding-left:2rem; }
+	// .px-6 { padding-left:4rem; padding-right:4rem; }
+
+	header { /*background-color:yellow;*/ padding:1.5rem 3rem; position:absolute; top:0; width:100%; display:flex; justify-content:center; }
+	main { 
+		/*background-color:grey;*/ margin:2rem 0rem; display:inline-block; width:100%;
+		button:hover { opacity:0.9 }
+	}
+	footer { 
+		/*background-color:blue;*/ padding:1.5rem 3rem; position:absolute; bottom:0; width:100%; display:flex; flex-direction:column; justify-content:center; align-items:center;
+		#fb { padding: 0.4rem 0.8rem; }
+		.icons-padding { padding: 0.4rem 0.6rem; }
+		.copyright { margin-top:0.75rem; margin-bottom:0rem; .color-grey(); }
+		a:hover { color:#ffffff; .color-blue(); }
+	}
 }
