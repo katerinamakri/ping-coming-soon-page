@@ -32,8 +32,8 @@
       <div class="mt-4">
         <form class="d-flex justify-content-center" ng-submit="$ctrl.validation()">
           <div class="">
-            <input class="input-padding rounded-pill border" type="email" name="email" ng-model="$ctrl.data.email" placeholder="Your email address..." />
-            <p class="error-padding color-red">test</p>
+            <input class="input-padding rounded-pill border" type="email" name="email" ng-class="{'border-red': ($ctrl.errors.email != null)}" ng-model="$ctrl.data.email" placeholder="Your email address..." />
+            <p class="mt-2 position-absolute error-padding color-red font-styles" ng-if="$ctrl.errors.email != null">{{ $ctrl.errors.email }}</p>
           </div>
           
           <div>
@@ -42,16 +42,16 @@
         </form>
       </div>
 
-      <div class="mt-5 d-flex justify-content-center align-items-center">
+      <div class="mt-6 d-flex justify-content-center align-items-center">
         <img class="w-50 img-fluid" src="./app/images/illustration-dashboard.png">       
       </div>
     </main>
 
     <footer>
         <div class="w-100 d-flex justify-content-center">
-          <a id="fb" class="border rounded-pill" href="#"><i class="fab fa-facebook-f fa-m" aria-hidden="true"></i></a>
-          <a class="mx-2 border rounded-pill icons-padding" href="#"><i class="fab fa-twitter fa-m" aria-hidden="true"></i></a>
-          <a class="border rounded-pill icons-padding" href="#"><i class="fab fa-instagram fa-m" aria-hidden="true"></i></a>
+          <a class="" href="#"><i id="fb" class="fab fa-facebook-f fa-m border rounded-pill" aria-hidden="true"></i></a>
+          <a class="mx-2 " href="#"><i class="fab fa-twitter fa-m icons-padding border rounded-pill" aria-hidden="true"></i></a>
+          <a class="" href="#"><i class="fab fa-instagram fa-m icons-padding border rounded-pill" aria-hidden="true"></i></a>
         </div>
 
         <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
